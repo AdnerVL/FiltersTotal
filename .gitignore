@@ -1,0 +1,7 @@
+*.log
+*.xlsx
+.env
+*.txt
+*.bak
+*.txt
+*.csv
