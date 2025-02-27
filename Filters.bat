@@ -34,12 +34,10 @@ echo         TotalQuantity = ($_.Group ^| Measure-Object -Property Quantity -Sum
 echo     } >> temp_script.ps1
 echo } >> temp_script.ps1
 echo. >> temp_script.ps1
-echo # Display the results on screen >> temp_script.ps1
-echo $results ^| Format-Table -AutoSize >> temp_script.ps1
 echo # Export results to a CSV file >> temp_script.ps1
 echo $results ^| Export-Csv -Path "filter_totals.csv" -NoTypeInformation >> temp_script.ps1
 echo Write-Host "Results saved to filter_totals.csv in the current directory." >> temp_script.ps1
-echo Write-Host "Done! These are the total quantities for each filter size." >> temp_script.ps1
+echo Write-Host "Done! Totals for each filter size have been calculated." >> temp_script.ps1
 
 :: Run the script
 powershell.exe -ExecutionPolicy Bypass -File "temp_script.ps1"
