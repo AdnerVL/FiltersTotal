@@ -23,41 +23,41 @@ It groups identical sizes, sums their quantities, and saves the totals to `filte
    - Ensure sizes are in Column B (B2 onward) and quantities in Column C (C2 onward).
    - Example:
 
-text
-B      C
-20x20x1 5
-12x12x1 1
-20x20x1 5
-12x12x1 1
+     | B       | C  |
+     |---------|----|
+     | 20x20x1 | 5  |
+     | 12x12x1 | 1  |
+     | 20x20x1 | 5  |
+     | 12x12x1 | 1  |
 
-
-- Save it in the same folder as `Filters.bat` (e.g., `c:\Tools\tests`).
+   - Save it in the same folder as `Filters.bat` (e.g., `c:\Tools\tests`).
 
 2. **Run the Script**:
-
-- Open Command Prompt.
-- Navigate to the script’s folder: `cd c:\Tools\tests`.
-- Execute: `Filters.bat`.
-- The script finds the first `.xlsx` file in the directory and processes it.
+   - Open Command Prompt.
+   - Navigate to the script’s folder: `cd c:\Tools\tests`.
+   - Execute: `Filters.bat`.
+   - The script finds the first `.xlsx` file in the directory and processes it.
 
 3. **Check the Output**:
+   - Results are saved to `filter_totals.csv` in the same folder.
+   - Example output (`filter_totals.csv`):
 
-- Results are saved to `filter_totals.csv` in the same folder.
-- Example output (`filter_totals.csv`):
-"Size","TotalQuantity"
-"20x20x1","10"
-"12x12x1","2"
+     ```
+     "Size","TotalQuantity"
+     "20x20x1","10"
+     "12x12x1","2"
+     ```
 
-- Open it in Excel or a text editor to review.
+   - Open it in Excel or a text editor to review.
 
 ## Script Details
 
 - **File**: `Filters.bat`
 - **Process**:
- 1. Checks for and installs the `ImportExcel` module if needed.
- 2. Finds an `.xlsx` file in the current directory.
- 3. Reads data from "Sheet1", starting at B2 (sizes) and C2 (quantities).
- 4. Groups sizes, sums quantities, and exports to `filter_totals.csv`.
+  1. Checks for and installs the `ImportExcel` module if needed.
+  2. Finds an `.xlsx` file in the current directory.
+  3. Reads data from "Sheet1", starting at B2 (sizes) and C2 (quantities).
+  4. Groups sizes, sums quantities, and exports to `filter_totals.csv`.
 - **Cleanup**: Deletes the temporary PowerShell script (`temp_script.ps1`) after running.
 
 ## Customization
