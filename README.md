@@ -23,13 +23,13 @@ It groups identical sizes, sums their quantities, and saves the totals to `filte
    - Ensure sizes are in Column B (B2 onward) and quantities in Column C (C2 onward).
    - Example:
 
-text ```
+text
 B      C
 20x20x1 5
 12x12x1 1
 20x20x1 5
 12x12x1 1
-```
+
 
 - Save it in the same folder as `Filters.bat` (e.g., `c:\Tools\tests`).
 
